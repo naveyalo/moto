@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/**
+ * Основные стили
+ **/
+
+body {
+  font-family: 'Mali', cursive;
+  font-size: 16px;
+}
+
+.container {
+  @include min-max(320px, 100%, 0);
+}
+
+.wrap {
+  @include min-max(320px, 1170px, 15px);
+}
+
+p {
+  color: $black;
+}

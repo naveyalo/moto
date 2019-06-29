@@ -1,0 +1,403 @@
+.header{
+   background-color: $bg;
+
+  .header-account{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 0;
+    border-bottom: 2px solid $text;
+
+    a{
+      color: $red;
+      margin-right: 40px;
+      text-decoration: none;
+      transition-duration: 500ms;
+      transition-property: color;
+
+      &:hover{
+        color: rgb(180,90,58);
+      }
+      i{
+        color: $red;
+        margin-right: 5px;
+      }
+    }
+.checkout{
+
+  a{
+    margin-right: 20px;
+  }
+}
+    .search{
+       position: relative;
+
+      .search-btn{
+        background: 0;
+        border: 0;
+        box-shadow: none;
+        cursor: pointer;
+
+        i{
+          color: $white;
+          border-left: 2px solid $text;
+          padding-left: 20px;
+
+        }
+      }
+
+      form{
+
+        .search-input{
+          padding: 10px;
+          position: absolute;
+          top: 37px;
+          right: 0;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+      }
+    }
+  }
+
+  .header-monfree{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 0;
+
+    .close-btns{
+      display: none;
+      width: 20px;
+      height: 20px;
+    }
+
+    i{
+      color: $red;
+      margin-right: 5px;
+      text-align: center;
+      padding-bottom: 20px;
+      font-size: 20px;
+    }
+    a{
+      color: $white;
+      text-decoration: none;
+      transition-duration: 500ms;
+      transition-property: opacity;
+
+      &:hover{
+        opacity: 0.7;
+      }
+    }
+
+    .monfree-logo{
+      margin-right: 30px;
+
+      img{
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+      }
+      p{
+        font-size: 20px;
+        color: $white;
+        text-transform: uppercase;
+        padding-top: 20px;
+        text-align: center;
+      }
+
+    }
+    .monfree-pm,
+    .monfree-star,
+    .monfree-side,
+    .monfree-cart{
+      display: flex;
+      flex-direction: column;
+
+    }
+    .monfree-star,
+    .monfree-side,
+    .monfree-cart{
+      border-left: 2px solid $text;
+      padding: 0 0 0 60px;
+      margin: 0 auto;
+    }
+
+    .monfree-pm{
+
+      .monfree-addres{
+        text-align: right;
+      }
+      p{
+        color: $text;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .header-menu{
+    background-color: $black;
+
+    .menu{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .close-btn{
+        width: 20px;
+        height: 20px;
+        display: none;
+      }
+
+      a{
+        color: $white;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 20px 0;
+        transition-duration: 500ms;
+        transition-property: opacity;
+
+        &:hover{
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  .header-img{
+    background: url('../img/bg.png') center center no-repeat fixed;
+    border: none;
+    box-shadow: none;
+    background-size: cover;
+    max-width: 100%;
+    max-height: 100%;
+    width: 1600px;
+    height: 677px;
+  }
+}
+
+@media (max-width: 1170px){
+  .header{
+
+    .header-account{
+      justify-content: space-around;
+
+      a{
+        margin-right: 0;
+      }
+      .checkout{
+
+        a{
+          margin-right: 0;
+        }
+      }
+
+      .search{
+
+        form{
+
+          .search-input{
+            right: -97px;
+          }
+        }
+      }
+    }
+    .header-monfree{
+
+      .monfree-star,
+      .monfree-side,
+      .monfree-cart{
+        padding: 0;
+        border-left: 0;
+      }
+    }
+  }
+}
+@media (max-width: 860px){
+  .header{
+
+    .header-account{
+
+      .search{
+
+        form{
+
+          .search-input{
+            top: -15px;
+            right: 40px;
+          }
+        }
+      }
+    }
+
+    .monfree-link{
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      right: 20px;
+      top: 60px;
+      z-index: 1;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      span{
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: $white;
+        top: 20px;
+        left: 0;
+        margin-left: 10px;
+
+        &:nth-child(1){
+          transform: translateY(-6px);
+        }
+        &:nth-child(3){
+          transform: translateY(6px);
+        }
+      }
+    }
+
+    .header-monfree{
+      flex-direction: column;
+      justify-content: center;
+      transform: translateY(-100%);
+      text-align: center;
+      position: fixed;
+      width: 100%;
+      background-color: $black;
+      left: 0;
+      margin: 0;
+      top: 0;
+      z-index: 99;
+
+      .close-btns{
+        display: block;
+      }
+
+
+      .monfree-logo{
+        margin-right: 0;
+      }
+      .monfree-star,
+      .monfree-side,
+      .monfree-cart{
+        flex-direction: row;
+      }
+      .monfree-pm{
+
+        .monfree-addres{
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        p{
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+      .monfree-active {
+        transform: translateY(0);
+        transition-duration: 500ms;
+      }
+
+    .header-menu{
+
+      .menu-link{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 20px;
+        top: 60px;
+        z-index: 1;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        span{
+          position: absolute;
+          width: 20px;
+          height: 2px;
+          background-color: $white;
+          top: 20px;
+          left: 0;
+          margin-left: 10px;
+
+          &:nth-child(1){
+            transform: translateY(-6px);
+          }
+          &:nth-child(3){
+            transform: translateY(6px);
+          }
+        }
+      }
+
+      .menu{
+        transform: translateY(-100%);
+        flex-direction: column;
+        text-align: center;
+        position: fixed;
+        width: 100%;
+
+        background-color: $black;
+        left: 0;
+        margin: 0;
+        top: 0;
+        z-index: 99;
+
+        .close-btn{
+          display: block;
+        }
+      }
+      .active-menu {
+        transform: translateY(0);
+        transition-duration: 500ms;
+      }
+    }
+
+    .header-img{
+      background: 0;
+      background-color: $text;
+
+      height: 50px;
+    }
+    }
+  }
+@media (max-width: 560px){
+  .header{
+
+    .header-account{
+
+      a{
+        font-size: 0;
+
+        i{
+          font-size: 16px;
+        }
+      }
+      .checkout{
+
+        a{
+          margin-right: 20px;
+        }
+      }
+
+      .search{
+
+        i{
+          color: $white;
+          border-left: 2px solid $text;
+          padding-left: 20px;
+        }
+      }
+    }
+
+
+  }
+}
